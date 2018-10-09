@@ -326,7 +326,7 @@ function randomRangeInt(min, max) {
 }
 
 function random() {
-  if (pullDownMenuRandomType.value === "Choir") {
+  if (pullDownMenuRandomType.value === "Overtone") {
     inputSeed.random()
 
     var overtone = new Array(overtoneControl.overtone.length)
@@ -390,7 +390,7 @@ var buttonRandom = new Button(divRenderControls.element, "Random",
   () => { random(); play(audioContext, wave, true) })
 var pullDownMenuRandomType = new PullDownMenu(divRenderControls.element, null,
   () => { })
-pullDownMenuRandomType.add("Choir")
+pullDownMenuRandomType.add("Overtone")
 pullDownMenuRandomType.add("All")
 var buttonSave = new Button(divRenderControls.element, "Save",
   () => save(wave))
